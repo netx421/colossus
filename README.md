@@ -1,4 +1,6 @@
 COLOSSUS — Telehack Terminal Subsystem
+![Colossus](colossus.png)
+
 Fast • Secure • Post-Quantum Ready • Retro-Hardened Terminal Emulator
 
 COLOSSUS is a hardened, amber-phosphor, Telehack-optimized fork of Alacritty, rebuilt for:
