@@ -1,5 +1,7 @@
 COLOSSUS — Telehack Terminal Subsystem
 Fast • Secure • Post-Quantum Ready • Retro-Hardened Terminal Emulator
+
+
  ██████╗ ██████╗ ██╗      ██████╗ ███████╗███████╗██╗   ██╗███████╗
 ██╔════╝██╔═══██╗██║     ██╔═══██╗██╔════╝██╔════╝██║   ██║██╔════╝
 ██║     ██║   ██║██║     ██║   ██║███████╗███████╗██║   ██║███████╗
