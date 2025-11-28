@@ -17,36 +17,36 @@ Table of Contents:
 ## Feature Requests
 
 Feature requests should be reported in the
-[Alacritty issue tracker](https://github.com/alacritty/alacritty/issues). To reduce the number of
+[Alacritty issue tracker](https://github.com/colossus/colossus/issues). To reduce the number of
 duplicates, please make sure to check the existing
-[enhancement](https://github.com/alacritty/alacritty/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Aenhancement)
+[enhancement](https://github.com/colossus/colossus/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Aenhancement)
 and
-[missing feature](https://github.com/alacritty/alacritty/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22B+-+missing+feature%22)
+[missing feature](https://github.com/colossus/colossus/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22B+-+missing+feature%22)
 issues.
 
 ## Bug Reports
 
 Bug reports should be reported in the
-[Alacritty issue tracker](https://github.com/alacritty/alacritty/issues).
+[Alacritty issue tracker](https://github.com/colossus/colossus/issues).
 
 If a bug was not present in a previous version of Alacritty, providing the exact commit which
 introduced the regression helps out a lot.
 
 ## Patches / Pull Requests
 
-All patches have to be sent on GitHub as [pull requests](https://github.com/alacritty/alacritty/pulls).
+All patches have to be sent on GitHub as [pull requests](https://github.com/colossus/colossus/pulls).
 
 If you are looking for a place to start contributing to Alacritty, take a look at the
-[help wanted](https://github.com/alacritty/alacritty/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+[help wanted](https://github.com/colossus/colossus/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
 and
-[easy](https://github.com/alacritty/alacritty/issues?q=is%3Aopen+is%3Aissue+label%3A%22D+-+easy%22)
+[easy](https://github.com/colossus/colossus/issues?q=is%3Aopen+is%3Aissue+label%3A%22D+-+easy%22)
 issues.
 
 You can find the minimum supported Rust version in Alacritty's manifest file
-(`cat alacritty/Cargo.toml | grep "rust-version"`). Alacritty **must** always
+(`cat colossus/Cargo.toml | grep "rust-version"`). Alacritty **must** always
 build with the MSRV and bumping it should be avoided if possible.
 
-Since `alacritty_terminal`'s version always tracks the next release, make sure that the version is
+Since `colossus_terminal`'s version always tracks the next release, make sure that the version is
 bumped according to semver when necessary.
 
 ### Testing
@@ -75,9 +75,9 @@ If changes could affect throughput or latency of Alacritty, these aspects should
 prevent potential regressions. Since there are often big performance differences between Rust's
 nightly releases, it's advised to perform these tests on the latest Rust stable release.
 
-Alacritty mainly uses the [vtebench](https://github.com/alacritty/vtebench) tool for testing Alacritty's
+Alacritty mainly uses the [vtebench](https://github.com/colossus/vtebench) tool for testing Alacritty's
 performance. Instructions on how to use it can be found in its
-[README](https://github.com/alacritty/vtebench/blob/master/README.md).
+[README](https://github.com/colossus/vtebench/blob/master/README.md).
 
 Latency is another important factor for Alacritty. On X11, Windows, and macOS the
 [typometer](https://github.com/pavelfatin/typometer) tool allows measuring keyboard latency.
@@ -91,8 +91,8 @@ If any change has been made to the `config.rs` file, it should also be documente
 
 Changes compared to the latest Alacritty release which have a direct effect on the user (opposed to
 things like code refactorings or documentation/tests) additionally need to be documented in the
-`CHANGELOG.md`. When a notable change is made to `alacritty_terminal`, it should be documented in
-`alacritty_terminal/CHANGELOG.md` as well. The existing entries should be used as a style guideline.
+`CHANGELOG.md`. When a notable change is made to `colossus_terminal`, it should be documented in
+`colossus_terminal/CHANGELOG.md` as well. The existing entries should be used as a style guideline.
 The change log should be used to document changes from a user-perspective, instead of explaining the
 technical background (like commit messages) More information about Alacritty's change log format can
 be found [here](https://keepachangelog.com).
@@ -151,16 +151,16 @@ The exact steps for an exemplary `0.2.3` release might look like this:
  5. Follow Steps 4-13 of the regular release's example
  6. The release's changelog is ported back to master, removing fixes from the `0.2.3` release
 
-The `alacritty_terminal` crate is released in synchronization with `alacritty`, keeping the `-dev`
+The `colossus_terminal` crate is released in synchronization with `colossus`, keeping the `-dev`
 and `-rcX` version suffix identical across the two crates. As soon as the new Alacritty stable
-release is made, releases are tagged as `alacritty_terminal_vX.Y.Z` and pushed to crates.io. During
+release is made, releases are tagged as `colossus_terminal_vX.Y.Z` and pushed to crates.io. During
 a release, only the patch version is bumped on master, since there haven't been any changes since
 the last release yet.
 
 # Contact
 
 If there are any outstanding questions about contributing to Alacritty, they can be asked on the
-[Alacritty issue tracker](https://github.com/alacritty/alacritty/issues).
+[Alacritty issue tracker](https://github.com/colossus/colossus/issues).
 
-As a more immediate and direct form of communication, the Alacritty IRC channel (`#alacritty` on
+As a more immediate and direct form of communication, the Alacritty IRC channel (`#colossus` on
 Libera.Chat) can be used to contact many of the Alacritty contributors.

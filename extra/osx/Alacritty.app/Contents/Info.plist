@@ -5,9 +5,9 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>en</string>
   <key>CFBundleExecutable</key>
-  <string>alacritty</string>
+  <string>colossus</string>
   <key>CFBundleIdentifier</key>
-  <string>org.alacritty</string>
+  <string>org.colossus</string>
   <key>CFBundleInfoDictionaryVersion</key>
   <string>6.0</string>
   <key>CFBundleName</key>
@@ -23,7 +23,7 @@
   <key>CFBundleVersion</key>
   <string>1</string>
   <key>CFBundleIconFile</key>
-  <string>alacritty.icns</string>
+  <string>colossus.icns</string>
   <key>NSHighResolutionCapable</key>
   <true/>
   <key>NSMainNibFile</key>

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# COLOSSUS banner script (repo-local)
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BANNER="$SCRIPT_DIR/../assets/banner.txt"
+
+clear
+cat "$BANNER"
+

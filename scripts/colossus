@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# COLOSSUS — Telehack-focused terminal launcher
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/colossus"
+CONFIG_PATH="$CONFIG_DIR/colossus.toml"
+
+# If user doesn't already have a COLOSSUS config, copy our preset
+if [ ! -f "$CONFIG_PATH" ]; then
+    mkdir -p "$CONFIG_DIR"
+    cp "$REPO_ROOT/preset/colossus.toml" "$CONFIG_PATH"
+fi
+
+export COLOSSUS_BANNER_CMD="$REPO_ROOT/scripts/colossus-banner"
+export COLOSSUS_PQSSH_CMD="$REPO_ROOT/scripts/colossus-pq-ssh"
+export COLOSSUS_RC_FILE="$REPO_ROOT/scripts/colossus-rc.sh"
+
+exec "$REPO_ROOT/target/release/colossus" \
+  --config-file "$CONFIG_PATH" \
+  "$@"
+
+
+
+
+

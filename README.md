@@ -1,12 +1,12 @@
 <p align="center">
-    <img width="200" alt="Alacritty Logo" src="https://raw.githubusercontent.com/alacritty/alacritty/master/extra/logo/compat/alacritty-term%2Bscanlines.png">
+    <img width="200" alt="Alacritty Logo" src="https://raw.githubusercontent.com/colossus/colossus/master/extra/logo/compat/colossus-term%2Bscanlines.png">
 </p>
 
 <h1 align="center">Alacritty - A fast, cross-platform, OpenGL terminal emulator</h1>
 
 <p align="center">
   <img alt="Alacritty - A fast, cross-platform, OpenGL terminal emulator"
-       src="https://raw.githubusercontent.com/alacritty/alacritty/master/extra/promo/alacritty-readme.png">
+       src="https://raw.githubusercontent.com/colossus/colossus/master/extra/promo/colossus-readme.png">
 </p>
 
 ## About
@@ -21,11 +21,11 @@ The software is considered to be at a **beta** level of readiness; there are
 a few missing features and bugs to be fixed, but it is already used by many as
 a daily driver.
 
-Precompiled binaries are available from the [GitHub releases page](https://github.com/alacritty/alacritty/releases).
+Precompiled binaries are available from the [GitHub releases page](https://github.com/colossus/colossus/releases).
 
-Join [`#alacritty`] on libera.chat if you have questions or looking for a quick help.
+Join [`#colossus`] on libera.chat if you have questions or looking for a quick help.
 
-[`#alacritty`]: https://web.libera.chat/gamja/?channels=#alacritty
+[`#colossus`]: https://web.libera.chat/gamja/?channels=#colossus
 
 ## Features
 
@@ -33,9 +33,9 @@ You can find an overview over the features available in Alacritty [here](./docs/
 
 ## Further information
 
-- [Announcing Alacritty, a GPU-Accelerated Terminal Emulator](https://jwilm.io/blog/announcing-alacritty/) January 6, 2017
+- [Announcing Alacritty, a GPU-Accelerated Terminal Emulator](https://jwilm.io/blog/announcing-colossus/) January 6, 2017
 - [A talk about Alacritty at the Rust Meetup January 2017](https://www.youtube.com/watch?v=qHOdYO3WUTk) January 19, 2017
-- [Alacritty Lands Scrollback, Publishes Benchmarks](https://jwilm.io/blog/alacritty-lands-scrollback/) September 17, 2018
+- [Alacritty Lands Scrollback, Publishes Benchmarks](https://jwilm.io/blog/colossus-lands-scrollback/) September 17, 2018
 
 ## Installation
 
@@ -43,7 +43,7 @@ Alacritty can be installed by using various package managers on Linux, BSD,
 macOS and Windows.
 
 Prebuilt binaries for macOS and Windows can also be downloaded from the
-[GitHub releases page](https://github.com/alacritty/alacritty/releases).
+[GitHub releases page](https://github.com/colossus/colossus/releases).
 
 For everyone else, the detailed instructions to install Alacritty can be found
 [here](INSTALL.md).
@@ -56,23 +56,23 @@ For everyone else, the detailed instructions to install Alacritty can be found
 ## Configuration
 
 You can find the documentation for Alacritty's configuration in `man 5
-alacritty`, or by looking at [the website] if you do not have the manpages
+colossus`, or by looking at [the website] if you do not have the manpages
 installed.
 
-[the website]: https://alacritty.org/config-alacritty.html
+[the website]: https://colossus.org/config-colossus.html
 
 Alacritty doesn't create the config file for you, but it looks for one in the
 following locations:
 
-1. `$XDG_CONFIG_HOME/alacritty/alacritty.toml`
-2. `$XDG_CONFIG_HOME/alacritty.toml`
-3. `$HOME/.config/alacritty/alacritty.toml`
-4. `$HOME/.alacritty.toml`
-5. `/etc/alacritty/alacritty.toml`
+1. `$XDG_CONFIG_HOME/colossus/colossus.toml`
+2. `$XDG_CONFIG_HOME/colossus.toml`
+3. `$HOME/.config/colossus/colossus.toml`
+4. `$HOME/.colossus.toml`
+5. `/etc/colossus/colossus.toml`
 
 On Windows, the config file will be looked for in:
 
-* `%APPDATA%\alacritty\alacritty.toml`
+* `%APPDATA%\colossus\colossus.toml`
 
 ## Contributing
 
@@ -84,7 +84,7 @@ A guideline about contributing to Alacritty can be found in the
 **_Is it really the fastest terminal emulator?_**
 
 Benchmarking terminal emulators is complicated. Alacritty uses
-[vtebench](https://github.com/alacritty/vtebench) to quantify terminal emulator
+[vtebench](https://github.com/colossus/vtebench) to quantify terminal emulator
 throughput and manages to consistently score better than the competition using
 it. If you have found an example where this is not the case, please report a
 bug.
@@ -111,4 +111,4 @@ niceties like a GUI config editor.
 
 Alacritty is released under the [Apache License, Version 2.0].
 
-[Apache License, Version 2.0]: https://github.com/alacritty/alacritty/blob/master/LICENSE-APACHE
+[Apache License, Version 2.0]: https://github.com/colossus/colossus/blob/master/LICENSE-APACHE

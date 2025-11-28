@@ -1,16 +1,16 @@
-TARGET = alacritty
+TARGET = colossus
 
 ASSETS_DIR = extra
 RELEASE_DIR = target/release
-MANPAGE = $(ASSETS_DIR)/man/alacritty.1.scd
-MANPAGE-MSG = $(ASSETS_DIR)/man/alacritty-msg.1.scd
-MANPAGE-CONFIG = $(ASSETS_DIR)/man/alacritty.5.scd
-MANPAGE-CONFIG-BINDINGS = $(ASSETS_DIR)/man/alacritty-bindings.5.scd
-TERMINFO = $(ASSETS_DIR)/alacritty.info
+MANPAGE = $(ASSETS_DIR)/man/colossus.1.scd
+MANPAGE-MSG = $(ASSETS_DIR)/man/colossus-msg.1.scd
+MANPAGE-CONFIG = $(ASSETS_DIR)/man/colossus.5.scd
+MANPAGE-CONFIG-BINDINGS = $(ASSETS_DIR)/man/colossus-bindings.5.scd
+TERMINFO = $(ASSETS_DIR)/colossus.info
 COMPLETIONS_DIR = $(ASSETS_DIR)/completions
-COMPLETIONS = $(COMPLETIONS_DIR)/_alacritty \
-	$(COMPLETIONS_DIR)/alacritty.bash \
-	$(COMPLETIONS_DIR)/alacritty.fish
+COMPLETIONS = $(COMPLETIONS_DIR)/_colossus \
+	$(COMPLETIONS_DIR)/colossus.bash \
+	$(COMPLETIONS_DIR)/colossus.fish
 
 APP_NAME = Alacritty.app
 APP_TEMPLATE = $(ASSETS_DIR)/osx/$(APP_NAME)
@@ -47,11 +47,11 @@ $(APP_NAME)-%: $(TARGET)-%
 	@mkdir -p $(APP_BINARY_DIR)
 	@mkdir -p $(APP_EXTRAS_DIR)
 	@mkdir -p $(APP_COMPLETIONS_DIR)
-	@scdoc < $(MANPAGE) | gzip -c > $(APP_EXTRAS_DIR)/alacritty.1.gz
-	@scdoc < $(MANPAGE-MSG) | gzip -c > $(APP_EXTRAS_DIR)/alacritty-msg.1.gz
-	@scdoc < $(MANPAGE-CONFIG) | gzip -c > $(APP_EXTRAS_DIR)/alacritty.5.gz
-	@scdoc < $(MANPAGE-CONFIG-BINDINGS) | gzip -c > $(APP_EXTRAS_DIR)/alacritty-bindings.5.gz
-	@tic -xe alacritty,alacritty-direct -o $(APP_EXTRAS_DIR) $(TERMINFO)
+	@scdoc < $(MANPAGE) | gzip -c > $(APP_EXTRAS_DIR)/colossus.1.gz
+	@scdoc < $(MANPAGE-MSG) | gzip -c > $(APP_EXTRAS_DIR)/colossus-msg.1.gz
+	@scdoc < $(MANPAGE-CONFIG) | gzip -c > $(APP_EXTRAS_DIR)/colossus.5.gz
+	@scdoc < $(MANPAGE-CONFIG-BINDINGS) | gzip -c > $(APP_EXTRAS_DIR)/colossus-bindings.5.gz
+	@tic -xe colossus,colossus-direct -o $(APP_EXTRAS_DIR) $(TERMINFO)
 	@cp -fRp $(APP_TEMPLATE) $(APP_DIR)
 	@cp -fp $(APP_BINARY) $(APP_BINARY_DIR)
 	@cp -fp $(COMPLETIONS) $(APP_COMPLETIONS_DIR)

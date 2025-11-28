@@ -81,4 +81,4 @@ that.
 
 Alacritty supports running multiple terminal emulators from the same Alacritty
 instance. New windows can be created either by using the `CreateNewWindow`
-keybinding action, or by executing the `alacritty msg create-window` subcommand.
+keybinding action, or by executing the `colossus msg create-window` subcommand.

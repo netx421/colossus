@@ -5,8 +5,8 @@ The sections should follow the order `Packaging`, `Added`, `Changed`, `Fixed` an
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-Notable changes to the `alacritty_terminal` crate are documented in its
-[CHANGELOG](./alacritty_terminal/CHANGELOG.md).
+Notable changes to the `colossus_terminal` crate are documented in its
+[CHANGELOG](./colossus_terminal/CHANGELOG.md).
 
 ## 0.17.0-dev
 
@@ -41,10 +41,10 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 ### Added
 
 - Vi motions `*`, `#`, `{`, and `}`
-- IPC config retrieval using `alacritty msg get-config`
+- IPC config retrieval using `colossus msg get-config`
 - Multi-sequence touch zoom sequences
 - Vi action `Y` keybind, yank to the end of line
-- Add `/etc/alacritty/alacritty.toml` fallback for system wide configuration
+- Add `/etc/colossus/colossus.toml` fallback for system wide configuration
 - Unicode 17 support
 
 ### Changed
@@ -85,7 +85,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 
 - Config option `window.level = "AlwaysOnTop"` to force Alacritty to always be the toplevel window
 - Escape sequence to move cursor forward tabs ( CSI Ps I )
-- Pass activation token in `alacritty msg create-window` on Wayland/X11
+- Pass activation token in `colossus msg create-window` on Wayland/X11
 
 ### Changed
 
@@ -98,7 +98,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 - Mouse/Vi cursor hint highlighting broken on the terminal cursor line
 - Hint launcher opening arbitrary text, when terminal content changed while opening
 - `SemanticRight`/`SemanticLeft` vi motions breaking with wide semantic escape characters
-- `alacritty migrate` crashing with recursive toml imports
+- `colossus migrate` crashing with recursive toml imports
 - Migrating nonexistent toml import breaking the entire migration
 - First daemon mode window ignoring window options passed through CLI
 - Report of Enter/Tab/Backspace in kitty keyboard's report event types mode
@@ -114,8 +114,8 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 ### Added
 
 - Support relative path imports from config files
-- `alacritty migrate` support for TOML configuration changes
-- Headless mode using `alacritty --daemon`
+- `colossus migrate` support for TOML configuration changes
+- Headless mode using `colossus --daemon`
 
 ### Changed
 
@@ -165,7 +165,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 - Scrolling content upwards moving lines into history when it shouldn't
 - Sticky keys not working sometimes on X11
 - Modifiers occasionally getting desynced on X11
-- Autokey no longer working with alacritty on X11
+- Autokey no longer working with colossus on X11
 - Freeze when moving window between monitors on Xfwm
 - Mouse cursor not changing on Wayland when cursor theme uses legacy cursor icon names
 - Config keys are available under proper names
@@ -187,11 +187,11 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 
 ### Changed
 
-- `alacritty migrate` will ignore null values in yaml instead of erroring out
+- `colossus migrate` will ignore null values in yaml instead of erroring out
 
 ### Fixed
 
-- `alacritty migrate` failing with nonexistent imports
+- `colossus migrate` failing with nonexistent imports
 - `Alt` bindings requiring composed key rather than pre-composed one on macOS
 - `Alt + Control` bindings not working on Windows
 - `chars = "\u000A"` action in bindings inserting `\n`
@@ -227,7 +227,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 - Debug option `prefer_egl` to prioritize EGL over other display APIs
 - Inline vi-mode search using `f`/`F`/`t`/`T`
 - `window.blur` config option to request blur for transparent windows
-- `--option` argument for `alacritty msg create-window`
+- `--option` argument for `colossus msg create-window`
 - Support for `DECRQM`/`DECRPM` escape sequences
 - Support for kitty's keyboard protocol
 
@@ -236,7 +236,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 - Mode-specific bindings can now be bound in any mode for easier macros
 - `--help` output is more compact now and uses more neutral palette
 - Configuration file now uses TOML instead of YAML
-    Run `alacritty migrate` to automatically convert all configuration files
+    Run `colossus migrate` to automatically convert all configuration files
 - Deprecated config option `draw_bold_text_with_bright_colors`, use
     `colors.draw_bold_text_with_bright_colors`
 - Deprecated config option `key_bindings`, use `keyboard.bindings`
@@ -271,7 +271,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 - Copy/Paste being truncated to 64KiB on Wayland
 - X11 clipboard lagging behind sometimes
 - High wakeup count on Wayland due to clipboard polling
-- Blocking paste freezing alacritty on Wayland
+- Blocking paste freezing colossus on Wayland
 - `Command` modifier persisting after `Cmd + Tab` on macOS
 - Crash on exit when using NVIDIA binary drivers on Wayland
 - `window.startup_mode` applied to window again when creating new tab
@@ -378,8 +378,8 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 ### Packaging
 
 - Minimum Rust version has been bumped to 1.57.0
-- Renamed `io.alacritty.Alacritty.appdata.xml` to `org.alacritty.Alacritty.appdata.xml`
-- Renamed `io.alacritty` to `org.alacritty` for `Alacritty.app`
+- Renamed `io.colossus.Alacritty.appdata.xml` to `org.colossus.Alacritty.appdata.xml`
+- Renamed `io.colossus` to `org.colossus` for `Alacritty.app`
 
 ### Added
 
@@ -471,7 +471,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 
 ### Packaging
 
-- New `extra/alacritty-msg.man` manpage for the `alacritty msg` subcommand
+- New `extra/colossus-msg.man` manpage for the `colossus msg` subcommand
 - Minimum Rust version has been bumped to 1.53.0
 
 ### Added
@@ -665,7 +665,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 
 - Minimum Rust version has been bumped to 1.43.0
 - The snapcraft.yaml file has been removed
-- Updated `setab`/`setaf` capabilities in `alacritty-direct` to use colons
+- Updated `setab`/`setaf` capabilities in `colossus-direct` to use colons
 - WinPTY is now enabled only when targeting MSVC
 - Deprecated the WinPTY backend feature, disabling it by default
 
@@ -856,7 +856,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 - Alacritty not ignoring keyboard events for changing WM focus on X11
 - Regression which added a UNC path prefix to the working directory on Windows
 - CLI parameters discarded when config is reload
-- Blurred icons in KDE task switcher (alacritty.ico is now high-res)
+- Blurred icons in KDE task switcher (colossus.ico is now high-res)
 - Consecutive builds failing on macOS due to preexisting `/Application` symlink
 - Block selection starting from first column after beginning leaves the scrollback
 - Incorrect selection status of the first cell when selection is off screen
@@ -951,7 +951,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 ### Packaging
 
 - Minimum Rust version has been bumped to 1.36.0
-- Config is not generated anymore, please consider distributing the alacritty.yml as documentation
+- Config is not generated anymore, please consider distributing the colossus.yml as documentation
 - Removed Alacritty terminfo from .deb in favor of ncurses provided one
 
 ### Added
@@ -1040,7 +1040,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 
 ### Packaging
 
-- Add appstream metadata, located at /extra/linux/io.alacritty.Alacritty.xml
+- Add appstream metadata, located at /extra/linux/io.colossus.Alacritty.xml
 - The xclip dependency has been removed
 - On macOS, Alacritty now requests NSSystemAdministrationUsageDescription to
    avoid permission failures
@@ -1053,7 +1053,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
     fullscreen without occupying another space
 - A new window option `window.startup_mode` which controls how the window is created
 - `_NET_WM_ICON` property is set on X11 now, allowing for WMs to show icons in titlebars
-- Current Git commit hash to `alacritty --version`
+- Current Git commit hash to `colossus --version`
 - Config options `window.title` and `window.class`
 - Config option `working_directory`
 - Config group `debug` with the options `debug.log_level`, `debug.print_events`
@@ -1128,7 +1128,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 ### Packaging
 
 - On Linux, the .desktop file now uses `Alacritty` as icon name, which can be
-    found at `extra/logo/alacritty-term.svg`
+    found at `extra/logo/colossus-term.svg`
 
 ### Added
 
@@ -1247,7 +1247,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 
 ### Removed
 
-- Windows and macOS configuration files (`alacritty.yml` is now platform independent)
+- Windows and macOS configuration files (`colossus.yml` is now platform independent)
 
 ## Version 0.2.5
 
@@ -1262,8 +1262,8 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 ### Changed
 
 - Log messages are now consistent in style, and some have been removed
-- Windows configuration location has been moved from %USERPROFILE%\alacritty.yml
-    to %APPDATA%\alacritty\alacritty.yml
+- Windows configuration location has been moved from %USERPROFILE%\colossus.yml
+    to %APPDATA%\colossus\colossus.yml
 - Windows default shell is now PowerShell instead of cmd
 - URL schemes have been limited to http, https, mailto, news, file, git, ssh and ftp
 
@@ -1275,7 +1275,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 - Alt modifier is no longer sent separately from the modified key
 - Various Windows issues, like color support and performance, through the new ConPTY
 - Fixed rendering non default mouse cursors in terminal mouse mode (linux)
-- Fix the `Copy` `mouse_bindings` action ([#1963](https://github.com/alacritty/alacritty/issues/1963))
+- Fix the `Copy` `mouse_bindings` action ([#1963](https://github.com/colossus/colossus/issues/1963))
 - URLs are only launched when left-clicking
 - Removal of extra characters (like `,`) at the end of URLs has been improved
 - Single quotes (`'`) are removed from URLs when there is no matching opening quote
@@ -1286,7 +1286,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 ### Added
 
 - Option for evenly spreading extra padding around the terminal (`window.dynamic_padding`)
-- Option for maximizing alacritty on start (`window.start_maximized`)
+- Option for maximizing colossus on start (`window.start_maximized`)
 - Display notice about errors and warnings inside Alacritty
 - Log all messages to both stderr and a log file in the system's temporary directory
 - New configuration option `persistent_logging` and CLI flag `--persistent-logging`,
@@ -1374,7 +1374,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
     - `buttonless` - Similar to transparent but also removed the buttons.
 - Add support for changing the colors from 16 to 256 in the `indexed_colors` config section
 - Add `save_to_clipboard` configuration option for copying selected text to the system clipboard
-- New terminfo entry, `alacritty-direct`, that advertises 24-bit color support
+- New terminfo entry, `colossus-direct`, that advertises 24-bit color support
 - Add support for CSI sequences Cursor Next Line (`\e[nE`) and Cursor Previous Line (`\e[nF`)
 
 ### Changed
@@ -1382,9 +1382,9 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 - Inverse/Selection color is now modelled after XTerm/VTE instead of URxvt to improve consistency
 - First click on unfocused Alacritty windows is no longer ignored on platforms other than macOS
 - Reduce memory usage significantly by only initializing part of the scrollback buffer at startup
-- The `alacritty` terminfo entry no longer requires the `xterm` definition to be
+- The `colossus` terminfo entry no longer requires the `xterm` definition to be
   present on the system
-- The default `TERM` value is no longer static; the `alacritty` entry is used if
+- The default `TERM` value is no longer static; the `colossus` entry is used if
   available, otherwise the `xterm-256color` entry is used instead
 - The values `true` and `false` for the config option `window.decorations` have been replaced with
     `full` and `none`
@@ -1402,7 +1402,7 @@ Notable changes to the `alacritty_terminal` crate are documented in its
 
 ### Removed
 
-- The terminfo entry `alacritty-256color`. It is replaced by the `alacritty`
+- The terminfo entry `colossus-256color`. It is replaced by the `colossus`
   entry (which also advertises 256 colors)
 
 ## Version 0.2.0
