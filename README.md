@@ -1,114 +1,154 @@
-<p align="center">
-    <img width="200" alt="Alacritty Logo" src="https://raw.githubusercontent.com/colossus/colossus/master/extra/logo/compat/colossus-term%2Bscanlines.png">
-</p>
+COLOSSUS — Telehack Terminal Subsystem
+Fast • Secure • Post-Quantum Ready • Retro-Hardened Terminal Emulator
+ ██████╗ ██████╗ ██╗      ██████╗ ███████╗███████╗██╗   ██╗███████╗
+██╔════╝██╔═══██╗██║     ██╔═══██╗██╔════╝██╔════╝██║   ██║██╔════╝
+██║     ██║   ██║██║     ██║   ██║███████╗███████╗██║   ██║███████╗
+██║     ██║   ██║██║     ██║   ██║╚════██║╚════██║██║   ██║╚════██║
+╚██████╗╚██████╔╝███████╗╚██████╔╝███████║███████║╚██████╔╝███████║
+ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝╚══════╝ ╚═════╝ ╚══════╝
 
-<h1 align="center">Alacritty - A fast, cross-platform, OpenGL terminal emulator</h1>
 
-<p align="center">
-  <img alt="Alacritty - A fast, cross-platform, OpenGL terminal emulator"
-       src="https://raw.githubusercontent.com/colossus/colossus/master/extra/promo/colossus-readme.png">
-</p>
+COLOSSUS is a hardened, amber-phosphor, Telehack-optimized fork of Alacritty, rebuilt for:
 
-## About
+maximum speed
 
-Alacritty is a modern terminal emulator that comes with sensible defaults, but
-allows for extensive [configuration](#configuration). By integrating with other
-applications, rather than reimplementing their functionality, it manages to
-provide a flexible set of [features](./docs/features.md) with high performance.
-The supported platforms currently consist of BSD, Linux, macOS and Windows.
+retro-terminal authenticity
 
-The software is considered to be at a **beta** level of readiness; there are
-a few missing features and bugs to be fixed, but it is already used by many as
-a daily driver.
+stability + simplicity
 
-Precompiled binaries are available from the [GitHub releases page](https://github.com/colossus/colossus/releases).
+post-quantum PQ-SSH authentication
 
-Join [`#colossus`] on libera.chat if you have questions or looking for a quick help.
+full offline config via preset colossus.toml
 
-[`#colossus`]: https://web.libera.chat/gamja/?channels=#colossus
+instant Telehack login with the login command
 
-## Features
+immersive COLOSSUS boot banner every session
 
-You can find an overview over the features available in Alacritty [here](./docs/features.md).
+This is the terminal emulator the Colossus mainframe itself would ship.
 
-## Further information
+✨ Features
+🟡 Amber CRT Theme
 
-- [Announcing Alacritty, a GPU-Accelerated Terminal Emulator](https://jwilm.io/blog/announcing-colossus/) January 6, 2017
-- [A talk about Alacritty at the Rust Meetup January 2017](https://www.youtube.com/watch?v=qHOdYO3WUTk) January 19, 2017
-- [Alacritty Lands Scrollback, Publishes Benchmarks](https://jwilm.io/blog/colossus-lands-scrollback/) September 17, 2018
+Authentic 1970s/early-80s monochrome terminal styling
 
-## Installation
+Uniform color palette, crisp amber text, black-void background
 
-Alacritty can be installed by using various package managers on Linux, BSD,
-macOS and Windows.
+⚡ Fast & GPU-Accelerated
 
-Prebuilt binaries for macOS and Windows can also be downloaded from the
-[GitHub releases page](https://github.com/colossus/colossus/releases).
+Built on Alacritty’s lightning-fast Rust/OpenGL engine
 
-For everyone else, the detailed instructions to install Alacritty can be found
-[here](INSTALL.md).
+Zero bloat, minimal memory footprint
 
-### Requirements
+No tabs, splits, or GUI chrome — pure terminal
 
-- At least OpenGL ES 2.0
-- [Windows] ConPTY support (Windows 10 version 1809 or higher)
+🔐 Post-Quantum Secure Telehack Login
 
-## Configuration
+A built-in wrapper (colossus-pq-ssh) enables:
 
-You can find the documentation for Alacritty's configuration in `man 5
-colossus`, or by looking at [the website] if you do not have the manpages
-installed.
+login <username>
 
-[the website]: https://colossus.org/config-colossus.html
 
-Alacritty doesn't create the config file for you, but it looks for one in the
-following locations:
+which runs:
 
-1. `$XDG_CONFIG_HOME/colossus/colossus.toml`
-2. `$XDG_CONFIG_HOME/colossus.toml`
-3. `$HOME/.config/colossus/colossus.toml`
-4. `$HOME/.colossus.toml`
-5. `/etc/colossus/colossus.toml`
+pq-ssh -p 2222 <username>@telehack.com
 
-On Windows, the config file will be looked for in:
 
-* `%APPDATA%\colossus\colossus.toml`
+No more typing the full PQ-SSH command.
 
-## Contributing
+🖥️ Retro Boot Banner
 
-A guideline about contributing to Alacritty can be found in the
-[`CONTRIBUTING.md`](CONTRIBUTING.md) file.
+Every new COLOSSUS session displays:
 
-## FAQ
+The COLOSSUS system banner
 
-**_Is it really the fastest terminal emulator?_**
+Nuclear subsystem status
 
-Benchmarking terminal emulators is complicated. Alacritty uses
-[vtebench](https://github.com/colossus/vtebench) to quantify terminal emulator
-throughput and manages to consistently score better than the competition using
-it. If you have found an example where this is not the case, please report a
-bug.
+PQ-SSH readiness
 
-Other aspects like latency or framerate and frame consistency are more difficult
-to quantify. Some terminal emulators also intentionally slow down to save
-resources, which might be preferred by some users.
+AUTHORITY override channel status
 
-If you have doubts about Alacritty's performance or usability, the best way to
-quantify terminal emulators is always to test them with **your** specific
-usecases.
+🔧 Self-contained Config
 
-**_Why isn't feature X implemented?_**
+The repo includes:
 
-Alacritty has many great features, but not every feature from every other
-terminal. This could be for a number of reasons, but sometimes it's just not a
-good fit for Alacritty. This means you won't find things like tabs or splits
-(which are best left to a window manager or [terminal multiplexer][tmux]) nor
-niceties like a GUI config editor.
+preset/colossus.toml
+scripts/colossus-banner
+scripts/colossus-rc.sh
+scripts/colossus-pq-ssh
+scripts/colossus
 
-[tmux]: https://github.com/tmux/tmux
 
-## License
+All auto-installed on first launch.
 
-Alacritty is released under the [Apache License, Version 2.0].
+🚀 Installation
+1. Clone the repo
+git clone https://github.com/netx421/colossus.git
+cd colossus
 
-[Apache License, Version 2.0]: https://github.com/colossus/colossus/blob/master/LICENSE-APACHE
+2. Build COLOSSUS
+
+Requires Rust:
+
+cargo build --release
+
+3. Use the launcher
+
+Launch COLOSSUS through its script to ensure all banner & RC integrations work:
+
+./scripts/colossus
+
+
+On first run, it will automatically install:
+
+~/.config/colossus/colossus.toml
+
+🔑 Telehack Login
+
+Once inside COLOSSUS:
+
+login yourusername
+
+
+This uses pq-ssh at port 2222 automatically.
+
+📁 File Structure
+colossus/
+ ├── colossus                 ← binary (after build)
+ ├── scripts/
+ │    ├── colossus            ← launcher
+ │    ├── colossus-banner     ← retro boot banner
+ │    ├── colossus-pq-ssh     ← Telehack PQ-SSH wrapper
+ │    └── colossus-rc.sh      ← RC init for theme + banner
+ ├── preset/
+ │    └── colossus.toml       ← default config
+ ├── colossus_terminal/       ← backend rendering engine
+ ├── colossus_config/         ← config parser
+ └── Makefile / Cargo.toml
+
+🧪 Developer Mode
+
+Run from the repo without installing:
+
+./scripts/colossus --config-file preset/colossus.toml
+
+📜 License
+
+COLOSSUS is distributed under the same dual license as Alacritty:
+
+Apache 2.0
+
+MIT
+
+All original COLOSSUS scripts and preset files are © 2025 WillTech / netx421.
+
+🤖 Acknowledgements
+
+Built on Alacritty, the fastest GPU terminal emulator in the world
+
+Enhanced for the Telehack community
+
+Designed for maximum performance, minimalism, and retro computing authenticity
+
+🛰️ Project Status
+
+COLOSSUS v0.1 — Functional, stable, retro-themed, Telehack-ready.
