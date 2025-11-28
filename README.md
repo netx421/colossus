@@ -19,6 +19,24 @@ full COLOSSUS boot banner on launch
 
 This is the terminal emulator the Colossus mainframe itself would deploy.
 
+To build COLOSSUS on Ubuntu/Debian:
+
+sudo apt update
+sudo apt install -y build-essential cmake pkg-config \
+    libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev \
+    libxkbcommon-dev python3
+
+# install modern Rust (required for edition2024)
+curl https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
+rustup update
+
+# build
+git clone https://github.com/netx421/colossus.git
+cd colossus
+cargo build --release
+./scripts/colossus
+
 ✨ Features
 🟡 Amber CRT Theme
 
