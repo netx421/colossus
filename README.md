@@ -1,7 +1,5 @@
 COLOSSUS — Telehack Terminal Subsystem
 Fast • Secure • Post-Quantum Ready • Retro-Hardened Terminal Emulator
-
-
  ██████╗ ██████╗ ██╗      ██████╗ ███████╗███████╗██╗   ██╗███████╗
 ██╔════╝██╔═══██╗██║     ██╔═══██╗██╔════╝██╔════╝██║   ██║██╔════╝
 ██║     ██║   ██║██║     ██║   ██║███████╗███████╗██║   ██║███████╗
@@ -12,40 +10,42 @@ Fast • Secure • Post-Quantum Ready • Retro-Hardened Terminal Emulator
 
 COLOSSUS is a hardened, amber-phosphor, Telehack-optimized fork of Alacritty, rebuilt for:
 
-maximum speed
+extreme speed
 
-retro-terminal authenticity
-
-stability + simplicity
+retro 1970s terminal aesthetics
 
 post-quantum PQ-SSH authentication
 
-full offline config via preset colossus.toml
+zero bloat
 
-instant Telehack login with the login command
+stable GPU-accelerated rendering
 
-immersive COLOSSUS boot banner every session
+instant Telehack login via login <username>
 
-This is the terminal emulator the Colossus mainframe itself would ship.
+full COLOSSUS boot banner on launch
+
+This is the terminal emulator the Colossus mainframe itself would deploy.
 
 ✨ Features
 🟡 Amber CRT Theme
 
-Authentic 1970s/early-80s monochrome terminal styling
+Vintage phosphor-monitor look
 
-Uniform color palette, crisp amber text, black-void background
+Crisp monochrome text
 
-⚡ Fast & GPU-Accelerated
+Perfect for Telehack immersion
 
-Built on Alacritty’s lightning-fast Rust/OpenGL engine
+⚡ Performance
 
-Zero bloat, minimal memory footprint
+Based on Alacritty’s ultra-fast Rust/OpenGL core
 
-No tabs, splits, or GUI chrome — pure terminal
+Low memory use
 
-🔐 Post-Quantum Secure Telehack Login
+No tabs or UI chrome — pure terminal
 
-A built-in wrapper (colossus-pq-ssh) enables:
+🔐 Post-Quantum Telehack Login
+
+Includes a wrapper that enables:
 
 login <username>
 
@@ -54,103 +54,114 @@ which runs:
 
 pq-ssh -p 2222 <username>@telehack.com
 
+🖥️ Retro COLOSSUS Boot Banner
 
-No more typing the full PQ-SSH command.
+Every new session shows:
 
-🖥️ Retro Boot Banner
+System initialization
 
-Every new COLOSSUS session displays:
+PQ-SSH subsystem online
 
-The COLOSSUS system banner
+Nuclear link status
 
-Nuclear subsystem status
+Authority override channel
 
-PQ-SSH readiness
+Pure 1970s terminal authenticity.
 
-AUTHORITY override channel status
+🔧 Self-Contained Configuration
 
-🔧 Self-contained Config
+COLOSSUS automatically installs:
 
-The repo includes:
-
-preset/colossus.toml
-scripts/colossus-banner
-scripts/colossus-rc.sh
-scripts/colossus-pq-ssh
-scripts/colossus
+~/.config/colossus/colossus.toml
 
 
-All auto-installed on first launch.
+and integrates all scripts from this repo.
 
 🚀 Installation
-1. Clone the repo
+1. Clone the repository
 git clone https://github.com/netx421/colossus.git
 cd colossus
 
 2. Build COLOSSUS
 
-Requires Rust:
+You need Rust installed:
 
 cargo build --release
 
-3. Use the launcher
+3. Launch COLOSSUS
 
-Launch COLOSSUS through its script to ensure all banner & RC integrations work:
+Use the launcher so banners + RC integration work correctly:
 
 ./scripts/colossus
 
 
-On first run, it will automatically install:
+On first launch, COLOSSUS creates:
 
 ~/.config/colossus/colossus.toml
 
-🔑 Telehack Login
+🔑 Telehack Login Shortcut
 
-Once inside COLOSSUS:
+Inside COLOSSUS:
 
 login yourusername
 
 
-This uses pq-ssh at port 2222 automatically.
+Automatically connects using post-quantum SSH:
+
+pq-ssh -p 2222 yourusername@telehack.com
 
 📁 File Structure
 colossus/
- ├── colossus                 ← binary (after build)
+ ├── target/release/colossus        ← binary (after build)
  ├── scripts/
- │    ├── colossus            ← launcher
- │    ├── colossus-banner     ← retro boot banner
- │    ├── colossus-pq-ssh     ← Telehack PQ-SSH wrapper
- │    └── colossus-rc.sh      ← RC init for theme + banner
+ │    ├── colossus                  ← launcher
+ │    ├── colossus-banner           ← boot banner
+ │    ├── colossus-pq-ssh           ← PQ-SSH Telehack wrapper
+ │    └── colossus-rc.sh            ← session initialization
  ├── preset/
- │    └── colossus.toml       ← default config
- ├── colossus_terminal/       ← backend rendering engine
- ├── colossus_config/         ← config parser
- └── Makefile / Cargo.toml
+ │    └── colossus.toml             ← default config (amber CRT)
+ ├── colossus_terminal/             ← rendering backend
+ ├── colossus_config/               ← config handling
+ ├── Cargo.toml
+ ├── Makefile
+ └── README.md
 
 🧪 Developer Mode
 
-Run from the repo without installing:
+Run COLOSSUS from the repo without installing:
 
 ./scripts/colossus --config-file preset/colossus.toml
 
 📜 License
 
-COLOSSUS is distributed under the same dual license as Alacritty:
+COLOSSUS is dual-licensed under:
 
-Apache 2.0
+Apache-2.0
 
 MIT
 
-All original COLOSSUS scripts and preset files are © 2025 WillTech / netx421.
+Original COLOSSUS scripts and assets © 2025 WillTech / netx421.
 
 🤖 Acknowledgements
 
-Built on Alacritty, the fastest GPU terminal emulator in the world
+Built on the Alacritty terminal engine
 
-Enhanced for the Telehack community
+Enhanced and themed for the Telehack community
 
-Designed for maximum performance, minimalism, and retro computing authenticity
+Inspired by retro defense-network terminals of the 1970s
 
-🛰️ Project Status
+🛰️ Project Status — v0.1
 
-COLOSSUS v0.1 — Functional, stable, retro-themed, Telehack-ready.
+Functional. Stable. Fully themed. Telehack-ready.
+
+Planned additions:
+
+CRT scanline shader
+
+Key-click + teletype noise emulation
+
+COLOSSUS network-activity indicator lights
+
+Optional darker “WOPR Mode”
+
+Binary release packages for Linux/Mac/Windows
