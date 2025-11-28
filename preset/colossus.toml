@@ -42,6 +42,7 @@ multiplier = 3
 [terminal]
 # Bootstrap bash that expands $COLOSSUS_RC_FILE, then execs into an
 # interactive bash using COLOSSUS rc file.
-shell = { program = "/bin/bash", args = ["-lc", "exec bash --rcfile \"$COLOSSUS_RC_FILE\""] }
+shell = { program = "/bin/bash", args = ["--rcfile", "$COLOSSUS_RC_FILE"] }
+
 
 
